@@ -23,27 +23,12 @@ import {
     ReactNative,
     StyleSheet,
     View,
+    ViewPropTypes,
     UIManager
 }from 'react-native'
 //******************************结束************************************************//
 
-// import {
-//     keyMirror
-// } from 'fbjs/lib/keyMirror'
-
-// var EdgeInsetsPropType = require('EdgeInsetsPropType');
-// var ActivityIndicator = require('ActivityIndicator');
-
-// var ReactNative = require('ReactNative');
-// var StyleSheet = require('StyleSheet');
-// var UIManager = require('UIManager');
-// var View = require('View');
-
-// var requireNativeComponent = require('requireNativeComponent');
-// var resolveAssetSource = require('resolveAssetSource');
-
-var PropTypes = React.PropTypes;
-
+import PropTypes from 'prop-types'
 var RCT_WEBVIEW_REF = 'webviewandroid';
 
 var WebViewState = keyMirror({
@@ -65,7 +50,7 @@ var defaultRenderLoading = () => (
  */
 export default class WebViewAndroid extends React.Component {
     static propTypes = {
-        ...View.propTypes,
+        ...ViewPropTypes,
         renderError: PropTypes.func,
         renderLoading: PropTypes.func,
         onLoad: PropTypes.func,
@@ -78,7 +63,7 @@ export default class WebViewAndroid extends React.Component {
         onMessage: PropTypes.func,
         onContentSizeChange: PropTypes.func,
         startInLoadingState: PropTypes.bool, // force WebView to show loadingView on first load
-        style: View.propTypes.style,
+        style: ViewPropTypes.style,
 
         html: deprecatedPropType(
             PropTypes.string,

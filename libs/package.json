@@ -1,6 +1,6 @@
 {
-  "name": "react-native-android-webview",
-  "version": "0.0.8",
+  "name": "react-native-letote-android-webview",
+  "version": "0.1.7",
   "description": "react native webview",
   "main": "WebViewAndroid.js",
   "scripts": {
